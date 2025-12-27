@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/animeListFragment">
+
+    <fragment
+        android:id="@+id/animeListFragment"
+        android:name="com.anime.app.ui.fragments.AnimeListFragment"
+        android:label="Anime List">
+
+        <action
+            android:id="@+id/action_animeListFragment_to_animeDetailFragment"
+            app:destination="@id/animeDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/animeDetailFragment"
+        android:name="com.anime.app.ui.fragments.AnimeDetailFragment"
+        android:label="Anime Detail">
+
+        <argument
+            android:name="animeId"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>
